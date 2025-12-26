@@ -1,0 +1,64 @@
+@use "sass:list";
+@use "sass:math";
+
+/* 1. O'zgaruvchilar va Listlar */
+$primary-font: (Helvetica, Arial, sans-serif);
+$colors: red, blue, green, yellow;
+$base-padding: 10px 12px 16px;
+$body-font-size: 16px;
+
+/* 2. Debug funksiyalari (Terminalda ko'rinadi) */
+@debug "Ikkinchi padding:";
+@debug list.nth($base-padding, 2); // 12px
+
+@debug "Yashil rangning indeksi:";
+@debug list.index($colors, green); // 3
+
+@debug "Yangi ro'yxat (append):";
+@debug list.append($colors, purple);
+
+/* 3. Asosiy stillar */
+body {
+  font: {
+    family: $primary-font;
+    size: $body-font-size;
+  }
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h3 {
+  // Arifmetika: 16px * 2.5 = 40px
+  font-size: $body-font-size * 2.5;
+  color: list.nth($colors, 2); // blue
+}
+
+.info-box {
+  // list.index orqali dinamik qiymat (3 * 10 = 30px)
+  $dynamic-margin: list.index($colors, green) * 10px;
+  margin-top: $dynamic-margin;
+
+  border: 1px solid list.nth($colors, 1); // red
+  padding: list.nth($base-padding, 3); // 16px
+  border-radius: 8px;
+}
+
+small {
+  // Xavfsiz bo'lish (math.div)
+  font-size: math.div($body-font-size, 1.5);
+  color: #666;
+}
+
+.shadow-element {
+  width: 100%;
+  max-width: 300px;
+  height: 100px;
+  background: white;
+  margin: 20px 0;
+  // Listdan foydalangan holda box-shadow
+  $shadow-settings: 10px 10px 5px 0;
+  box-shadow: $shadow-settings rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
