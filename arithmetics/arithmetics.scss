@@ -1,0 +1,25 @@
+//@debug 10s + 15s;
+//@debug 5px + 3px;
+
+$body-font-size: 16px;
+
+body{
+  font-size: $body-font-size;
+}
+
+h3 {
+  font-size: $body-font-size * 3;
+}
+
+small {
+  font-size: $body-font-size / 4;
+}
+
+//@debug 100px + 50;
+//@debug 4s * 10;
+
+//@debug (5s + 7s);
+//@debug -(50px + 30px);
+//@debug -(10s - 15s);
+
+@debug 1in + 6px;  //CSSda har bir 'in' 96 pixel qilib belgilangan
