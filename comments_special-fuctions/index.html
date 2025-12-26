@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+Siz bergan SASS (SCSS) kodi uchun mantiqiy va mos keladigan HTML tuzilmasini tayyorladim. Bu kodda logotipni markazlashtirish, maxsus shriftni qo'llash va yon panel (sidebar) uchun joylashuv hisobga olingan.
 
+HTML Tuzilmasi
+HTML
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Style Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1>MY BRAND</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="side-bar">
+            <nav>
+                <ul>
+                    <li><a href="#">Bosh sahifa</a></li>
+                    <li><a href="#">Xizmatlar</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Bog'lanish</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content">
+            <p>Ushbu matn Roboto shriftida ko'rinishi kutilmoqda.</p>
+        </section>
+    </main>
 </body>
 </html>
