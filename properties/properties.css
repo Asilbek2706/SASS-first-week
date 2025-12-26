@@ -1,0 +1,17 @@
+.heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.enlarge {
+  transition-property: all;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+.info-page {
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 2px;
+}/*# sourceMappingURL=properties.css.map */
