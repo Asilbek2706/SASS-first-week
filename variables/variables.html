@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="variables.css">
+</head>
+<body>
+    <div class="container">
+        <div class="alert">
+            <strong>Diqqat!</strong> Bu o'zgaruvchilar yordamida hosil qilingan ogohlantirish oynasi.
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-1">
+            Bu matn qizil rangda va foni yashil.
+            Chunki bu yerda ham global ($primary-color), ham lokal ($secondary-color) o'zgaruvchi ishlaydi.
+        </div>
+
+        <div class="section-2">
+            Bu blokning faqat chegarasi qizil.
+            Agar biz bu yerda yashil fonni ishlatmoqchi bo'lsak, xatolik beradi,
+            chunki yashil rang faqat ".section-1" ga tegishli.
+        </div>
+    </div>
+
+    <div class="container">
+        <section>
+            Bu matn QIZIL rangda bo'ladi.
+
+            <div>
+                Bu matn YASHIL rangda bo'ladi (chunki ichki scope ustun keladi).
+            </div>
+
+            <p>Bu matn yana QIZIL bo'ladi (chunki u div ichida emas).</p>
+        </section>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

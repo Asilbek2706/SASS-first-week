@@ -1,0 +1,38 @@
+/* Variiables */
+$border-color: #c6538c;
+$border-type: solid;
+
+.alert{
+  border: 1px $border-type $border-color;
+}
+
+/* Scope */
+$primary-color: red;
+
+.section-1{
+  $secondary-color: green;
+  color: $primary-color;
+  background: $secondary-color;
+}
+
+.section-2{
+  border: 1px solid $primary-color;
+  //background: $secondary-color;
+//  Bu background ishlamaydi
+}
+
+/* Shadowing */
+$color: red;
+
+section{
+  color: $color;
+}
+
+section {
+  > {
+    div {
+      $color: green;
+      color: $color;
+    }
+  }
+}

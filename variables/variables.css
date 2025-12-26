@@ -1,0 +1,25 @@
+/* Variiables */
+.alert {
+  border: 1px solid #c6538c;
+}
+
+/* Scope */
+.section-1 {
+  color: red;
+  background: green;
+}
+
+.section-2 {
+  border: 1px solid red;
+}
+
+/* Shadowing */
+section {
+  color: red;
+}
+
+section > div {
+  color: green;
+}
+
+/*# sourceMappingURL=variables.css.map */
