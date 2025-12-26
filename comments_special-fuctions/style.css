@@ -1,0 +1,23 @@
+/* Bu komment css fileda complier boladi */
+/*! Bu komment css fileda complier boladi va har doim saqlanib qoladi*/
+/*! calc() */
+.logo {
+  width: 800px;
+  position: absolute;
+  left: calc(50% - 400px);
+  top: 0;
+}
+
+/*! url() */
+@font-face {
+  src: url("./1-hafta/roboto/RobotoCondensed-Black.woff");
+  font-family: "RobotoCondensed-Black";
+  font-weight: 100;
+}
+/*! min() va max() */
+.side-bar {
+  padding-left: 20px;
+  padding-right: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

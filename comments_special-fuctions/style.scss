@@ -1,0 +1,32 @@
+// bu komment silent comment va css filega complier bolmaydi
+/* Bu komment css fileda complier boladi */
+/*! Bu komment css fileda complier boladi va har doim saqlanib qoladi*/
+
+/*! calc() */
+@use "sass:math";
+
+.logo{
+  $width: 800px;
+  width: $width;
+  position: absolute;
+  left: calc(50% - #{$width / 2});
+  top: 0;
+}
+
+/*! url() */
+$roboto-font-path: "./1-hafta/roboto/RobotoCondensed-Black.woff";
+
+@font-face {
+  src: url('./1-hafta/roboto/RobotoCondensed-Black.woff');
+
+  font-family: "RobotoCondensed-Black";
+  font-weight: 100;
+}
+
+/*! min() va max() */
+$padding: 12px;
+
+.side-bar{
+  padding-left:max($padding, 20px);
+  padding-right: min($padding, 20px);
+}
