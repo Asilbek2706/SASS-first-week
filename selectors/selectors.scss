@@ -1,0 +1,58 @@
+nav{
+  display: flex;
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a{
+      color: darkred;
+    }
+  }
+
+  li{
+    display: inline-block;
+  }
+
+  a{
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+
+  .button{
+    border-radius: 4px;
+
+    span{
+      font-weight: 500;
+    }
+  }
+}
+
+.alert, .warning{
+  ul, p{
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+ul>{
+  li{
+    list-style-type: none;
+  }
+}
+
+h2{
+  +p{
+    border-top: 1px solid green;
+  }
+}
+
+p{
+  ~{
+    span{
+      opacity: 0.8;
+    }
+  }
+}
