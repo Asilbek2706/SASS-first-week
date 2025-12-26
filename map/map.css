@@ -1,0 +1,46 @@
+.button-success {
+  display: inline-block;
+  background-color: green;
+}
+
+.button-danger {
+  display: inline-block;
+  background-color: red;
+}
+
+.button-warning {
+  display: inline-block;
+  background-color: yellow;
+}
+
+.button-button-dark-warning {
+  display: inline-block;
+  background-color: black;
+}
+
+[class^=button-] {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+[class^=button-]:hover {
+  opacity: 0.9;
+  filter: brightness(90%);
+}
+[class^=button-]:active {
+  transform: translateY(1px);
+}
+
+.button-warning {
+  color: black;
+}
+
+/*# sourceMappingURL=map.css.map */

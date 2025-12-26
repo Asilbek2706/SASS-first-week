@@ -1,0 +1,55 @@
+//@use "sass:map";
+//
+//$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+//$light-weights: ("lighest": 100, "light": 100);
+//
+//@debug map.get($font-weights, "medium");
+//@debug map.get($font-weights, "extra-bold");
+//
+//@debug map.set($font-weights, "extra-bold", 900);
+//
+//@debug map.merge($font-weights, $light-weights);
+//
+//
+@use "sass:map";
+
+$buttons: ("success": green, "danger": red, "warning": yellow, "button-dark-warning": black);
+
+@each $name, $color in $buttons {
+  .button-#{$name} {
+    display: inline-block;
+    background-color: $color;
+  }
+}
+
+$btn-padding: 10px 20px;
+$btn-radius: 4px;
+$btn-font: sans-serif;
+
+// Asosiy selektor
+[class^="button-"] {
+  display: inline-block; // Tugmalar uchun muhim
+  padding: $btn-padding;
+  margin: 5px;
+  border: none;
+  border-radius: $btn-radius;
+  color: white;
+  font-family: $btn-font;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease; // Silliq o'tish effekti
+
+  // Hover effekti (SCSS ning qulayligi)
+  &:hover {
+    opacity: 0.9;
+    filter: brightness(90%);
+  }
+
+  // Faol holat (bosilganda)
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.button-warning { color: black; }
