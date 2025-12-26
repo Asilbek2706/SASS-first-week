@@ -1,0 +1,36 @@
+.alert:hover {
+  font-weight: bold;
+}
+[dir-rtl] .alert {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.alert.alert-danger {
+  color: orange;
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 4rem auto;
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  background: #f4f4f4;
+}
+.accordion__copy {
+  display: none;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  color: gray;
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 500;
+}
+.accordion__copy--open {
+  display: block;
+}
+
+/*! Interpolation */
+span.alert-danger {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

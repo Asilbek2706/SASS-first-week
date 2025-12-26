@@ -1,0 +1,45 @@
+.alert {
+  &:hover {
+    font-weight: bold;
+  }
+
+
+  [dir-rtl] & {
+    margin:{
+    left: 0;
+    right: 10px;
+   }
+  }
+
+  &.alert-danger {
+    color: orange;
+  }
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 4rem auto;
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  background: #f4f4f4;
+
+  &__copy {
+    display: none;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    color: gray;
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 500;
+
+    &--open {
+      display: block;
+    }
+  }
+}
+
+/*! Interpolation */
+$type: 'danger';
+
+span.alert-#{$type} {
+  color: red;
+}
